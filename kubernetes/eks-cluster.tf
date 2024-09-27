@@ -15,7 +15,7 @@ module "eks" {
   }
   
 
-  cluster_name = "myAppp-eks-cluster"  
+  cluster_name = "myAppp-eks-cluster"
   cluster_version = "1.27"
 
   subnet_ids = module.myAppp-vpc.private_subnets
@@ -33,7 +33,7 @@ module "eks" {
       desired_size = 3
 
       instance_types = ["t2.small"]
-      key_name       = "devopskeypair"
+      key_name       = "terra-ohio"
     }
   }
 }
