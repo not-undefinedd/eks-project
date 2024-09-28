@@ -89,15 +89,5 @@ pipeline {
                     }
                }
             }
-
-                stage('Get External IP') {
-                          steps {
-                            script {
-                            def externalIp = sh(script: 'kubectl get svc myjavaapp-myapp  -o jsonpath="{.status.loadBalancer.ingress[0].hostname}"', returnStdout: true).trim()
-                                  echo "Application is accessible at: http://${externalIp}"
-
-                            }
-                          }
-            }
     }
 }
